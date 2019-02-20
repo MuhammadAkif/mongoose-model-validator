@@ -4,8 +4,13 @@
   "description": "This package helps you validate mongoose model while creating and updating records.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "mocha tests/*.js -R spec --ui bdd --timeout 10000"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.0",
+    "mongoose": "^5.4.14"
+  }
 }
