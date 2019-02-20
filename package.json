@@ -1,0 +1,11 @@
+{
+  "name": "mongoose-model-validator",
+  "version": "1.0.0",
+  "description": "This package helps you validate mongoose model while creating and updating records.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "",
+  "license": "ISC"
+}
