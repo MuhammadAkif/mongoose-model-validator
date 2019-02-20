@@ -1,16 +1,27 @@
 {
   "name": "mongoose-model-validator",
   "version": "1.0.0",
-  "description": "This package helps you validate mongoose model while creating and updating records.",
+  "description": "This mongoose plugin helpu validating your model and return a list of errors.",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha tests/*.js -R spec --ui bdd --timeout 10000"
+  "directories": {
+    "test": "tests"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.0.0",
-    "mongoose": "^5.4.14"
-  }
+  "scripts": {
+    "test": "mocha tests/*.js -R spec --ui bdd --timeout 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhammadAkif/mongoose-model-validator.git"
+  },
+  "keywords": [
+    "model-validator",
+    "mongoose-model-validator",
+    "validator"
+  ],
+  "author": "Muhammad Akif <muhammad.akif786@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MuhammadAkif/mongoose-model-validator/issues"
+  },
+  "homepage": "https://github.com/MuhammadAkif/mongoose-model-validator#readme"
 }
