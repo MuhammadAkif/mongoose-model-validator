@@ -2,7 +2,7 @@
 This package helps you in validating mongoose model instance.
 
 
-#Code Examples
+# Code Examples
 
 ```
     let BookSchema = new mongoose.Schema({
