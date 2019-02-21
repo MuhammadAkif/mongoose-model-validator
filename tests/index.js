@@ -61,7 +61,7 @@ describe('mongoose-model-validation', function() {
         });
     });
 
-    it('should return validation error for Author Name', function(done) {
+    it('should return validation error for Author Name', function() {
         let book = new Book({
             title: "Beauty and the Beast",
             authorName: "D",
@@ -72,6 +72,23 @@ describe('mongoose-model-validation', function() {
             expect(error.hasError).to.equal(true);
             expect(error.type).to.equal("ValidationError");
             expect(error.errors).to.have.length(1);
+        }).catch((error) => {
+            console.error(error);
+        });
+    });
+
+    it('should return proper validation message', function(done) {
+        let book = new Book({
+            title: "Beauty and the Beast",
+            authorName: "D",
+            price: 100
+        });
+        let promise = book.validateDocument();
+        promise.then().catch((error) => {
+            expect(error.hasError).to.equal(true);
+            expect(error.type).to.equal("ValidationError");
+            expect(error.errors).to.have.length(1);
+            expect(error.errors).to.include("Author name must be 2 characters long");
             done();
         }).catch((error) => {
             console.error(error);
