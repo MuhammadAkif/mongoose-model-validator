@@ -38,7 +38,3 @@ class ValidateModel {
 module.exports = function (schema) {
     schema.methods.validateDocument = ValidateModel.validateDocument;
 };
-
-// module.exports = {
-//     validateDocument: ValidateModel.ValidateDocument
-// };
