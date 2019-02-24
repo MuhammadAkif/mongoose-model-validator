@@ -8,7 +8,8 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "test": "mocha tests/*.js -R spec --ui bdd --timeout 5000",
+    "check-coverage":"nyc check-coverage --statements 90 --branches 75 --functions 75 --lines 90",
+    "test": "nyc -x *.test.js _mocha -- -R spec tests/*.js  --ui bdd --timeout 5000",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -31,8 +32,10 @@
     "commitizen": "3.0.5",
     "cz-conventional-changelog": "2.1.0",
     "ghooks": "2.0.4",
+    "istanbul": "0.4.5",
     "mocha": "^6.0.0",
     "mongoose": "^5.4.14",
+    "nyc": "13.3.0",
     "semantic-release": "^15.13.3"
   },
   "dependencies": {},
@@ -41,8 +44,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && npm run check-coverage"
     }
   }
-
 }
