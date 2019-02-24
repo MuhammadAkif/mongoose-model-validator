@@ -1,7 +1,7 @@
 # mongoose-model-validator
 This package helps you in validating mongoose model instance.
 
-[![travis build](https://img.shields.io/travis/:user/:repo.svg)](https://travis-ci.org/MuhammadAkif/mongoose-model-validator)
+[![travis build](https://img.shields.io/travis/MuhammadAkif/mongoose-model-validator.svg)](https://travis-ci.org/MuhammadAkif/mongoose-model-validator)
 
 # Code Examples
 
