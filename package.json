@@ -30,6 +30,7 @@
     "chai": "^4.2.0",
     "commitizen": "3.0.5",
     "cz-conventional-changelog": "2.1.0",
+    "ghooks": "2.0.4",
     "mocha": "^6.0.0",
     "mongoose": "^5.4.14",
     "semantic-release": "^15.13.3"
@@ -37,5 +38,11 @@
   "dependencies": {},
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
   }
+
 }
